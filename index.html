@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"><title>馬券</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="renderer.js" type="module"></script>
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'">
+    </head>
+    <body>
+        <div id="console">
+            <button id="save">SAVE</button>
+        </div>
+        <div id="editor">
+            <div id="ticket_background">
+                <div id="ticket_container">
+                    <div id="upper">
+                        <div id="left">
+                            <div id="operation_date">
+                                <span id="year">
+                                    <span class="year">2026</span><span class="text">年</span>
+                                </span>
+                                <span id="operation_number">
+                                    <span class="number">0</span><span class="text">回</span>
+                                </span>
+                                <span id="operation_day">
+                                    <span class="number">0</span><span class="text">日</span>
+                                </span>
+                            </div>
+                            <div id="course">
+                                <img src="./letters/中2.svg">
+                                <img src="./letters/山2.svg">
+                            </div>
+                            <div id="race_number">
+                                <div id="race_number_box">
+                                    <span class="number">9</span>
+                                </div>
+                                <span class="text">レース</span>
+                            </div>
+                            <div id="qr_container">
+                                <div id="qr1"></div>
+                                <div id="qr2"></div>
+                            </div>
+                            <div id="race_info">
+                                <div id="race_grade">第１００回　（ＧⅡ）</div>
+                                <div id="race_name">中山記念</div>
+                            </div>
+                        </div>
+                        <div id="right">
+                            <div id="ticket_type">
+                                <div id="type_header">WIN</div>
+                                <div id="type_text">
+                                    <span>単</span>
+                                    <span>勝</span>
+                                </div>
+                                <div id="type_footer">WIN</div>
+                            </div>
+                            <div id="detail">
+                                <div id="gambare_box">
+                                    <span id="gap_letters">
+                                        <span>
+                                        が
+                                        </span>
+                                        <span>
+                                            ん
+                                        </span>
+                                        <span>
+                                            ば
+                                        </span>
+                                        <span>
+                                            れ
+                                        </span>
+                                    </span>
+                                    <span id="exclamation">！</span>
+                                </div>
+                                <div id="picks_container">
+                                    <div id="horse_name_container">
+                                        <div id="number">
+                                            1
+                                        </div>
+                                        <div id="horse_name">
+                                            リアライズシリウス
+                                        </div>
+                                    </div>
+                                    <div id="fee_container">
+                                        <span id="for_each">各</span>
+                                        <span id="fee"><span class="stars">☆☆☆</span>100</span>
+                                        <span id="unit">円</span>
+                                    </div>
+                                </div>
+                                <div id="fee_detail_container">
+                                    <div id="win_container">
+                                        <span class="pick_type">単勝</span>
+                                        <span class="pick_fee">
+                                            <span class="stars">☆☆☆</span>
+                                            <span class="fee_money">100</span>
+                                        </span>
+                                        <span class="pick_unit">円</span>
+                                    </div>
+                                    <div id="placeshow_container">
+                                        <span class="pick_type">複勝</span>
+                                        <span class="pick_fee">
+                                            <span class="stars">☆☆☆</span>
+                                            <span class="fee_money">100</span>
+                                        </span>
+                                        <span class="pick_unit">円</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="lower">
+                        <div id="purchased_cond">
+                            <div id="purchased_place">
+                                <img alt="JRA">
+                                <span class="text">東京</span>
+                            </div>
+                            <div id="purchased_date">
+                            ５月２４日
+                            </div>
+                        </div>
+                        <div id="data_container">
+                            <div id="fee_sum_container">
+                                <div id="sum_text">合計</div>
+                                <div id="sum_amount">
+                                    <div class="num_container">000020</div>
+                                    <div class="unit">枚</div>
+                                </div>
+                                <div id="sum_money">
+                                    <div class="num_container">000020</div>
+                                    <div class="unit">円</div>
+                                </div>
+                            </div>
+                            <div id="some_number">
+                                05053099909909 1999099909999 10090999 700999
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
