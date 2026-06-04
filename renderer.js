@@ -12,6 +12,16 @@ async function save_img() {
     })
 }
 
+const selectors = document.getElementsByClassName("selector")
+
+for (const selector in selectors){
+    const options = selector.getElementsByClassName("option")
+
+    selector.addEventListener("click", ()=>{
+        
+    })
+}
+
 const save_but = document.getElementById("save")
 
 save_but.addEventListener("click", ()=>{

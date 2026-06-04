@@ -14,8 +14,45 @@ body{
     font-weight: 700;
 }
 #console{
-    height: 300px;
+    line-height: 1.2;
+
+    display: flex;
+    margin: 100px 100px 0 100px;
+    height: 200px;
     width: auto;
+
+    .selector{
+        position: relative;
+    }
+    .selector::after{
+        position: absolute;
+        bottom: 0;
+        content: "";
+        height: 1px;
+        width: 100%;
+        background-color: black;
+    }
+    .option{
+        display: none;
+        text-align: center;
+        cursor: pointer;
+    }
+    .option.selected{
+        display: block;
+    }
+
+    #racecourse_selector{
+        width: 100px;
+        height: 50px;
+        font-family: "Yu Gothic";
+        font-size: 40px;
+        font-weight: 1000;
+
+        .option{
+            width: 100px;
+            height: 50px;
+        }
+    }
 }
 #editor{
     margin-left: 460px;
