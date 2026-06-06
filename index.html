@@ -8,23 +8,56 @@
     </head>
     <body>
         <div id="console">
-            <div id="operation_input" class="input">
-                <div id="input_year">
+            <div id="operation_input">
+                <div class="input opyear">
                     <div class="selected_element">2026</div>
-                    <input class="year" type="number">
+                    <input type="number">
                 </div>
-                <div id="input_operation_num">
+                <div class="input opnum">
                     <div class="selected_element">0</div>
+                    <input type="number">
+                    <div class="text">回</div>
                 </div>
-                <div id="input_operation_day">
+                <div class="input opday">
                     <div class="selected_element">0</div>
+                    <input type="number">
+                    <div class="text">日</div>
+                </div>
+            </div>
+            <div id="racenum_input">
+                <div class="input racenum">
+                    <div class="selected_element">9</div>
+                    <input type="number">
+                </div>
+            </div>
+            <div id="raceinfo_console">
+                <button id="grade_race_toggle">重賞</button>
+                <div class="input race_edition">
+                    <span class="text">第</span>
+                    <span class="selected_element">0</span>
+                    <input>
+                    <span class="text">回</span>
+                </div>
+                <div class="selector race_grade">
+                    <div class="selected_element"></div>
+                    <div class="pulldown">
+                        <div class="option">（ＧⅠ）</div>
+                        <div class="option">（ＧⅡ）</div>
+                        <div class="option">（ＧⅢ）</div>
+                        <div class="option">（Ｊ・ＧⅠ）</div>
+                        <div class="option">（Ｊ・ＧⅡ）</div>
+                        <div class="option">（Ｊ・ＧⅢ）</div>
+                        <div class="option">（ＪｐｎⅠ）</div>
+                        <div class="option">（ＪｐｎⅡ）</div>
+                        <div class="option">（ＪｐｎⅢ）</div>
+                    </div>
                 </div>
             </div>
 
-            <div id="racecourse_selector" class="selector">
+            <div id="racecourse_selector" class="racecourse selector">
                 <div class="selected_element option"></div>
                 <div class="pulldown">
-                    <div id="Nakayama" class="option selected">中山</div>
+                    <div id="Nakayama" class="option">中山</div>
                     <div id="Tokyo" class="option">東京</div>
                     <div id="Hanshin" class="option">阪神</div>
                     <div id="Kyoto" class="option">京都</div>
@@ -44,14 +77,14 @@
                     <div id="upper">
                         <div id="left">
                             <div id="operation_date">
-                                <span id="year">
-                                    <span class="year">2026</span><span class="text">年</span>
+                                <span class="opyear">
+                                    <span class="value opyear">2026</span><span class="text">年</span>
                                 </span>
-                                <span id="operation_number">
-                                    <span class="number">0</span><span class="text">回</span>
+                                <span class="opnum">
+                                    <span class="value opnum">0</span><span class="text">回</span>
                                 </span>
-                                <span id="operation_day">
-                                    <span class="number">0</span><span class="text">日</span>
+                                <span class="opday">
+                                    <span class="value opday">0</span><span class="text">日</span>
                                 </span>
                             </div>
                             <div id="course">
@@ -60,7 +93,7 @@
                             </div>
                             <div id="race_number">
                                 <div id="race_number_box">
-                                    <span class="number">9</span>
+                                    <span class="value racenum">9</span>
                                 </div>
                                 <span class="text">レース</span>
                             </div>
@@ -69,7 +102,7 @@
                                 <img id="qr2" src="./img/qr2.svg">
                             </div>
                             <div id="race_info">
-                                <div id="race_grade">第１００回　（ＧⅡ）</div>
+                                <div id="race_grade"><span class="value race_edition"></span>　<span class="value race_grade"></span></div>
                                 <div id="race_name">中山記念</div>
                             </div>
                         </div>
@@ -102,16 +135,16 @@
                                 </div>
                                 <div id="picks_container">
                                     <div id="horse_name_container">
-                                        <div id="number">
+                                        <div class="value horse_num">
                                             1
                                         </div>
-                                        <div id="horse_name">
-                                            リアライズシリウス
+                                        <div class="value horse_name">
+                                            クリスチャニティ
                                         </div>
                                     </div>
                                     <div id="fee_container">
                                         <span id="for_each">各</span>
-                                        <span id="fee"><span class="stars">☆☆☆</span>300</span>
+                                        <span id="fee" class="value"><span class="stars">☆☆☆</span>300</span>
                                         <span id="unit">円</span>
                                     </div>
                                 </div>
@@ -160,6 +193,7 @@
                             </div>
                             <div id="some_number">
                                 05053099909909 1999099909999 10090999 700999
+                                <!-- INTERNATIONAL  CHRISTIANITY  UNIVERSITY ICURA-->
                             </div>
                         </div>
                     </div>

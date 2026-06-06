@@ -28,58 +28,68 @@ body{
     font-family: "Yu Gothic";
     font-size: 40px;
     font-weight: 1000;
-
-    .input{
+}
+.input{
+    height: 50px;
+    input{
+        font-size: 40px;
+        font-weight: 1000;
         width: 100px;
         height: 50px;
-
-        input{
-            font-size: 40px;
-            font-weight: 1000;
-            width: 100px;
-            height: 50px;
-            display: none;
-        }
-
-        input.year{
-            font-family: "Yu Gothic UI";
-        }
-    }
-
-    #operation_input{
-        display: flex;
-    }
-
-    .selector, .input{
-        position: relative;
-        cursor: pointer;
-    }
-    .selector::after, .input::after{
-        position: absolute;
-        bottom: 0;
-        content: "";
-        height: 1px;
-        width: 100%;
-        background-color: black;
-    }
-    .pulldown{
         display: none;
     }
-    .option{
-        text-align: center;
-    }
-    .selected{
-        background-color: gray;
-    }
+}
 
-    #racecourse_selector{
+#operation_input{
+    display: flex;
+    gap: 20px;
+
+    .input{
+        font-family: "Yu Gothic UI";
+    }
+    .input.opnum, .input.opday{
+        display: flex;
+        input, .selected_element{
+            width: 50px;
+        }
+    }
+}
+#raceinfo_console{
+    display: flex;
+}
+.input.race_edition{
+    display: flex;
+}
+
+.selector, .input{
+    position: relative;
+    cursor: pointer;
+}
+.selector::after, .input::after{
+    position: absolute;
+    bottom: 0;
+    content: "";
+    height: 1px;
+    width: 100%;
+    background-color: black;
+}
+.pulldown{
+    display: none;
+}
+.option{
+    text-align: center;
+}
+.selected{
+    background-color: gray;
+}
+
+#racecourse_selector{
+    width: 100px;
+    height: 50px;
+
+    .option{
         width: 100px;
         height: 50px;
-
-        .option{
-            width: 100px;
-            height: 50px;
-        }
     }
 }
 #editor{
@@ -108,8 +118,8 @@ body{
 }
 #operation_date{
     height: 50px;
-    #year{
-        .year{
+    .opyear{
+        span.value{
             font-size: 40px;
             font-family: "Bahnschrift";
         }
@@ -117,8 +127,8 @@ body{
             font-size: 40px;
         }
     }
-    #operation_number{
-        .number{
+    .opnum{
+        span.value{
             font-size: 40px;
             font-family: "Bahnschrift";
         }
@@ -126,8 +136,8 @@ body{
             font-size: 40px;
         }
     }
-    #operation_day{
-        .number{
+    .opday{
+        span.value{
             font-size: 40px;
             font-family: "Bahnschrift";
         }
@@ -150,7 +160,7 @@ body{
         width: 120px;
         height: 60px;
         text-align: center;
-        .number{
+        span.racenum{
             width: 120px;
             height: 60px;
             font-size: 60px;
@@ -270,7 +280,7 @@ body{
         #horse_name_container{
             display: flex;
 
-            #number{
+            div.horse_num{
                 border: 2px solid black;
                 box-sizing: border-box;
 
@@ -280,7 +290,8 @@ body{
                 font-size: 60px;
                 font-family: sans-serif;
             }
-            #horse_name{
+            div.horse_name{
+                margin-left: 5px;
                 font-size: 31px;
                 transform: scaleY(2);
                 line-height: 60px;
