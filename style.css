@@ -24,11 +24,37 @@ body{
     margin: 100px 100px 0 100px;
     height: 200px;
     width: auto;
+    gap: 20px;
+    font-family: "Yu Gothic";
+    font-size: 40px;
+    font-weight: 1000;
 
-    .selector{
-        position: relative;
+    .input{
+        width: 100px;
+        height: 50px;
+
+        input{
+            font-size: 40px;
+            font-weight: 1000;
+            width: 100px;
+            height: 50px;
+            display: none;
+        }
+
+        input.year{
+            font-family: "Yu Gothic UI";
+        }
     }
-    .selector::after{
+
+    #operation_input{
+        display: flex;
+    }
+
+    .selector, .input{
+        position: relative;
+        cursor: pointer;
+    }
+    .selector::after, .input::after{
         position: absolute;
         bottom: 0;
         content: "";
@@ -36,21 +62,19 @@ body{
         width: 100%;
         background-color: black;
     }
-    .option{
+    .pulldown{
         display: none;
-        text-align: center;
-        cursor: pointer;
     }
-    .option.selected{
-        display: block;
+    .option{
+        text-align: center;
+    }
+    .selected{
+        background-color: gray;
     }
 
     #racecourse_selector{
         width: 100px;
         height: 50px;
-        font-family: "Yu Gothic";
-        font-size: 40px;
-        font-weight: 1000;
 
         .option{
             width: 100px;
