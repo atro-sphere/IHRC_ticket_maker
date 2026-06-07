@@ -26,34 +26,11 @@
             </div>
             <div id="racenum_input">
                 <div class="input racenum">
-                    <div class="selected_element">9</div>
+                    <div class="selected_element">11</div>
                     <input type="number">
                 </div>
             </div>
-            <div id="raceinfo_console">
-                <button id="grade_race_toggle">重賞</button>
-                <div class="input race_edition">
-                    <span class="text">第</span>
-                    <span class="selected_element">0</span>
-                    <input>
-                    <span class="text">回</span>
-                </div>
-                <div class="selector race_grade">
-                    <div class="selected_element"></div>
-                    <div class="pulldown">
-                        <div class="option">（ＧⅠ）</div>
-                        <div class="option">（ＧⅡ）</div>
-                        <div class="option">（ＧⅢ）</div>
-                        <div class="option">（Ｊ・ＧⅠ）</div>
-                        <div class="option">（Ｊ・ＧⅡ）</div>
-                        <div class="option">（Ｊ・ＧⅢ）</div>
-                        <div class="option">（ＪｐｎⅠ）</div>
-                        <div class="option">（ＪｐｎⅡ）</div>
-                        <div class="option">（ＪｐｎⅢ）</div>
-                    </div>
-                </div>
-            </div>
-
+            
             <div id="racecourse_selector" class="racecourse selector">
                 <div class="selected_element option"></div>
                 <div class="pulldown">
@@ -69,6 +46,46 @@
                     <div id="Kokura" class="option">小倉</div>
                 </div>
             </div>
+
+            
+            <div id="racename_console">
+                <div id="racename">
+                    <button id="racename_free" class="active">自由指定</button>
+                    <button id="racename_select">レース名選択</button>
+                    <div id="raceinfo_console">
+                        <button id="grade_race_toggle">重賞</button>
+                        <div class="input race_edition">
+                            <span class="text">第</span>
+                            <span class="selected_element">0</span>
+                            <input>
+                            <span class="text">回</span>
+                        </div>
+                        <div class="selector race_grade">
+                            <div class="selected_element option"></div>
+                            <div class="pulldown">
+                                <div class="option">（ＧⅠ）</div>
+                                <div class="option">（ＧⅡ）</div>
+                                <div class="option">（ＧⅢ）</div>
+                                <div class="option">（Ｊ・ＧⅠ）</div>
+                                <div class="option">（Ｊ・ＧⅡ）</div>
+                                <div class="option">（Ｊ・ＧⅢ）</div>
+                                <div class="option">（ＪｐｎⅠ）</div>
+                                <div class="option">（ＪｐｎⅡ）</div>
+                                <div class="option">（ＪｐｎⅢ）</div>
+                            </div>
+                        </div>
+                        <div class="input racename free">
+                            <div class="selected_element">自由指定</div>
+                            <input>
+                        </div>
+                    </div>
+                    <div class="selector racename select">
+                        <div class="selected_element option"></div>
+                        <div class="pulldown"></div>
+                    </div>
+                </div>
+            </div>
+
             <button id="save">SAVE</button>
         </div>
         <div id="editor">
@@ -88,12 +105,13 @@
                                 </span>
                             </div>
                             <div id="course">
+                                <span class="value racecourse">中山</span>
                                 <img src="./letters/中2.svg">
                                 <img src="./letters/山2.svg">
                             </div>
                             <div id="race_number">
                                 <div id="race_number_box">
-                                    <span class="value racenum">9</span>
+                                    <span class="value racenum">11</span>
                                 </div>
                                 <span class="text">レース</span>
                             </div>
@@ -103,17 +121,17 @@
                             </div>
                             <div id="race_info">
                                 <div id="race_grade"><span class="value race_edition"></span>　<span class="value race_grade"></span></div>
-                                <div id="race_name">中山記念</div>
+                                <div class="value racename"></div>
                             </div>
                         </div>
                         <div id="right">
                             <div id="ticket_type">
-                                <div id="type_header">WIN</div>
+                                <div id="type_header" class="type_suffixes">WIN</div>
                                 <div id="type_text">
                                     <span>単</span>
                                     <span>勝</span>
                                 </div>
-                                <div id="type_footer">WIN</div>
+                                <div id="type_footer" class="type_suffixes">WIN</div>
                             </div>
                             <div id="detail">
                                 <div id="gambare_box">

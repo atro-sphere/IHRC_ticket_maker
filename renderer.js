@@ -61,6 +61,7 @@ for (const selector of selectors){
 
         for (const option of options){
             option.addEventListener("click", ()=>{
+                const selected_op = pulldown.querySelectorAll(".selected")[0]
                 selected_op?.classList.remove("selected")
 
                 option.classList.add("selected")
@@ -113,6 +114,42 @@ for (const input of inputs){
         
     })
 }
+
+const grade_race_toggle = document.getElementById("grade_race_toggle")
+
+grade_race_toggle.addEventListener("click", ()=>{
+    grade_race_toggle.classList.toggle("active")
+
+    const race_edition_input = document.querySelector("div.input.race_edition")
+    const race_grade_input = document.querySelector("div.selector.race_grade")
+
+    if (grade_race_toggle.classList.contains("active")){
+        race_edition_input.style.display = "flex"
+        race_grade_input.style.display = "block"
+    }
+    else{
+        race_edition_input.style.display = "none"
+        race_grade_input.style.display = "none"
+    }
+})
+
+const racename_free = document.getElementById("racename_free")
+const racename_select = document.getElementById("racename_select")
+
+const raceinfo_console = document.getElementById("raceinfo_console")
+
+racename_free.addEventListener("click", ()=>{
+    racename_free.classList.add("active")
+    racename_select.classList.remove("active")
+
+    raceinfo_console.style.display = "flex"
+})
+racename_select.addEventListener("click", ()=>{
+    racename_select.classList.add("active")
+    racename_free.classList.remove("active")
+
+    raceinfo_console.style.display = "none"
+})
 
 const save_but = document.getElementById("save")
 

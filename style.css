@@ -17,6 +17,21 @@ body{
     font-family: "Bebas Neue";
     src: url(./fonts/BebasNeue-Regular.ttf);
 }
+@font-face {
+    font-family: "Retro Mincho";
+    src: url(./fonts/SweiB2SugarCJKjp-SemiBold.ttf);
+}
+@font-face {
+    font-family: "Retro Mincho Bold";
+    src: url(./fonts/SweiB2SugarCJKjp-Bold.ttf);
+}
+button{
+    background-color: white;
+}
+button.active{
+    background-color: chocolate;
+}
+
 #console{
     line-height: 1.2;
 
@@ -42,6 +57,7 @@ body{
 
 #operation_input{
     display: flex;
+    height: 50px;
     gap: 20px;
 
     .input{
@@ -54,16 +70,22 @@ body{
         }
     }
 }
-#raceinfo_console{
-    display: flex;
-}
-.input.race_edition{
-    display: flex;
+#racenum_input{
+    height: 50px;
 }
 
+#raceinfo_console{
+    display: flex;
+    height: 50px;
+    gap: 20px;
+}
+.input.race_edition{
+    display: none;
+}
 .selector, .input{
     position: relative;
     cursor: pointer;
+    height: 50px;
 }
 .selector::after, .input::after{
     position: absolute;
@@ -83,15 +105,51 @@ body{
     background-color: gray;
 }
 
-#racecourse_selector{
-    width: 100px;
-    height: 50px;
+.selector.race_grade{
+    display: none;
+    width: 200px;
+}
 
-    .option{
-        width: 100px;
+.option{
+    width: 100%;
+    height: 100%;
+}
+
+.racecourse.selector{
+    width: 100px;
+}
+#racename_console{
+    display: flex;
+    gap: 20px;
+
+    #racename{
+        display: flex;
         height: 50px;
+        gap: 20px;
+    }
+
+    .input.racename.free{
+        display: block;
+        .selected_element{
+            width: 300px;
+            font-size: 20px;
+        }
+        input{
+            width: 300px;
+            font-size: 20px;
+        }
+    }
+    .input.racename_select{
+        display: none;
     }
 }
+#save{
+    height: 50px;
+}
+
+
+
+
 #editor{
     margin-left: 460px;
     width: 1000px;
@@ -148,7 +206,13 @@ body{
 }
 #course{
     height: 70px;
+    span{
+        font-family: "Retro Mincho Bold";
+        font-size: 60px;
+        letter-spacing: 10px;
+    }
     img{
+        display: none;
         height: 70px;
     }
 }
@@ -171,6 +235,7 @@ body{
         }
     }
     .text{
+        font-family: "Retro Mincho";
         font-size: 45px;
         bottom: 0;
         position: absolute;
@@ -199,7 +264,7 @@ body{
         font-size: 30px;
         transform: scaleY(1.3);
     }
-    #race_name{
+    .racename{
         height: 40px;
         font-size: 30px;
         transform: scaleY(1.3);
@@ -216,14 +281,16 @@ body{
     text-align: center;
     justify-content: center;
 
-    #type_header{
-        font-family: sans-serif;
+    .type_suffixes{
+        font-family: "Yu Gothic UI Semibold";
         display: flex;
         align-items: center;
         justify-content: center;
         font-size: 25px;
         width: 86px;
         height: 39px;
+    }
+    #type_header{
     }
     #type_text{
         display: flex;
@@ -236,16 +303,10 @@ body{
         gap: 100px;
         span{
             display: block;
+            font-family: "Retro Mincho";
         }
     }
     #type_footer{
-        font-family: sans-serif;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 25px;
-        width: 86px;
-        height: 39px;
     }
 }
 #detail{
