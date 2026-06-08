@@ -8,86 +8,120 @@
     </head>
     <body>
         <div id="console">
-            <div id="operation_input">
-                <div class="input opyear">
-                    <div class="selected_element">2026</div>
-                    <input type="number">
+            <div id="console_upper">
+                <div id="operation_input">
+                    <div class="input opyear">
+                        <div class="selected_element">2026</div>
+                        <input type="number">
+                    </div>
+                    <div class="input opnum">
+                        <div class="selected_element">0</div>
+                        <input type="number">
+                        <div class="text">回</div>
+                    </div>
+                    <div class="input opday">
+                        <div class="selected_element">0</div>
+                        <input type="number">
+                        <div class="text">日</div>
+                    </div>
                 </div>
-                <div class="input opnum">
-                    <div class="selected_element">0</div>
-                    <input type="number">
-                    <div class="text">回</div>
+                <div id="racenum_input">
+                    <div class="input racenum">
+                        <div class="selected_element">11</div>
+                        <input type="number">
+                    </div>
                 </div>
-                <div class="input opday">
-                    <div class="selected_element">0</div>
-                    <input type="number">
-                    <div class="text">日</div>
+                
+                <div id="racecourse_selector" class="racecourse selector">
+                    <div class="selected_element option"></div>
+                    <div class="pulldown">
+                        <div id="Nakayama" class="option">中山</div>
+                        <div id="Tokyo" class="option">東京</div>
+                        <div id="Hanshin" class="option">阪神</div>
+                        <div id="Kyoto" class="option">京都</div>
+                        <div id="Sapporo" class="option">札幌</div>
+                        <div id="Hakodate" class="option">函館</div>
+                        <div id="Niigata" class="option">新潟</div>
+                        <div id="Fukushima" class="option">福島</div>
+                        <div id="Chukyo" class="option">中京</div>
+                        <div id="Kokura" class="option">小倉</div>
+                    </div>
                 </div>
-            </div>
-            <div id="racenum_input">
-                <div class="input racenum">
-                    <div class="selected_element">11</div>
-                    <input type="number">
-                </div>
-            </div>
-            
-            <div id="racecourse_selector" class="racecourse selector">
-                <div class="selected_element option"></div>
-                <div class="pulldown">
-                    <div id="Nakayama" class="option">中山</div>
-                    <div id="Tokyo" class="option">東京</div>
-                    <div id="Hanshin" class="option">阪神</div>
-                    <div id="Kyoto" class="option">京都</div>
-                    <div id="Sapporo" class="option">札幌</div>
-                    <div id="Hakodate" class="option">函館</div>
-                    <div id="Niigata" class="option">新潟</div>
-                    <div id="Fukushima" class="option">福島</div>
-                    <div id="Chukyo" class="option">中京</div>
-                    <div id="Kokura" class="option">小倉</div>
-                </div>
-            </div>
-
-            
-            <div id="racename_console">
-                <div id="racename">
-                    <button id="racename_free" class="active">自由指定</button>
-                    <button id="racename_select">レース名選択</button>
-                    <div id="raceinfo_console">
-                        <button id="grade_race_toggle">重賞</button>
-                        <button id="listed_race_toggle">リステッド</button>
-                        <div class="input race_edition">
-                            <span class="text">第</span>
-                            <span class="selected_element">0</span>
-                            <input>
-                            <span class="text">回</span>
-                        </div>
-                        <div class="selector race_grade">
-                            <div class="selected_element option"></div>
-                            <div class="pulldown">
-                                <div class="option">（ＧⅠ）</div>
-                                <div class="option">（ＧⅡ）</div>
-                                <div class="option">（ＧⅢ）</div>
-                                <div class="option">（Ｊ・ＧⅠ）</div>
-                                <div class="option">（Ｊ・ＧⅡ）</div>
-                                <div class="option">（Ｊ・ＧⅢ）</div>
-                                <div class="option">（ＪｐｎⅠ）</div>
-                                <div class="option">（ＪｐｎⅡ）</div>
-                                <div class="option">（ＪｐｎⅢ）</div>
+                
+                <div id="racename_console">
+                    <div id="racename">
+                        <button id="racename_free" class="active">自由指定</button>
+                        <button id="racename_select">レース名選択</button>
+                        <div id="raceinfo_console">
+                            <button id="grade_race_toggle">重賞</button>
+                            <button id="listed_race_toggle">リステッド</button>
+                            <div class="input race_edition">
+                                <span class="text">第</span>
+                                <span class="selected_element">0</span>
+                                <input>
+                                <span class="text">回</span>
+                            </div>
+                            <div class="selector race_grade">
+                                <div class="selected_element option"></div>
+                                <div class="pulldown">
+                                    <div class="option">（ＧⅠ）</div>
+                                    <div class="option">（ＧⅡ）</div>
+                                    <div class="option">（ＧⅢ）</div>
+                                    <div class="option">（Ｊ・ＧⅠ）</div>
+                                    <div class="option">（Ｊ・ＧⅡ）</div>
+                                    <div class="option">（Ｊ・ＧⅢ）</div>
+                                    <div class="option">（ＪｐｎⅠ）</div>
+                                    <div class="option">（ＪｐｎⅡ）</div>
+                                    <div class="option">（ＪｐｎⅢ）</div>
+                                </div>
+                            </div>
+                            <div class="input racename free">
+                                <div class="selected_element">自由指定</div>
+                                <input>
                             </div>
                         </div>
-                        <div class="input racename free">
-                            <div class="selected_element">自由指定</div>
-                            <input>
+                        <div class="selector racename select">
+                            <div class="selected_element option"></div>
+                            <div class="pulldown"></div>
                         </div>
-                    </div>
-                    <div class="selector racename select">
-                        <div class="selected_element option"></div>
-                        <div class="pulldown"></div>
                     </div>
                 </div>
             </div>
+            <div id="console_lower">
+                <div class="selector betting_type">
+                    <div class="selected_element option"></div>
+                    <div class="pulldown">
+                        <div id="win" class="option selected">単勝</div>
+                        <div id="place_show" class="option">複勝</div>
+                        <div id="yell" class="option">応援</div>
+                        <div id="bracket_quinella" class="option">枠連</div>
+                        <div id="quinella" class="option">馬連</div>
+                        <div id="exacta" class="option">馬単</div>
+                        <div id="quinella_place" class="option">ワイド</div>
+                        <div id="trio" class="option">３連複</div>
+                        <div id="trifecta" class="option">３連単</div>
+                    </div>
+                </div>
 
-            <button id="save">SAVE</button>
+                <div class="input horse_num">
+                    <div class="selected_element">0</div>
+                    <input type="number">
+                </div>
+
+                <div class="input horse_name">
+                    <div class="selected_element">クリスチャニティ</div>
+                    <input>
+                </div>
+
+
+
+
+
+
+                <button id="save">SAVE</button>
+            </div>
+           
+
         </div>
         <div id="editor">
             <div id="ticket_background">
@@ -191,8 +225,8 @@
                     <div id="lower">
                         <div id="purchased_cond">
                             <div id="purchased_place">
-                                <img alt="JRA">
-                                <span class="text">東京</span>
+                                <img alt="ICURA">
+                                <span class="text">三鷹</span>
                             </div>
                             <div id="purchased_date">
                             ５月２４日

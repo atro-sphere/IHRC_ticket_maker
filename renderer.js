@@ -73,7 +73,57 @@ for (const selector of selectors){
                     else{
                         target.textContent = text
                     }
+                }
+                else if(selector_class == "betting_type"){
+                    const betting_container = document.getElementById("ticket_type")
+
+                    const type_header = betting_container.querySelector("#type_header")
+                    const type_text = betting_container.querySelector("div#type_text")
+                    const type_footer = betting_container.querySelector("#type_footer")
+
+                    const selected_type = option.id
+                    const gambare_box = document.getElementById("gambare_box")
                     
+                    if(selected_type === "yell"){
+                        gambare_box.classList.add("active")
+                    }
+                    else{
+                        gambare_box.classList.remove("active")
+                        const map = {
+                            "win": "単勝",
+                            "place_show": "複勝",
+                            "bracket_quinella": "枠連",
+                            "quinella": "馬連",
+                            "exacta": "馬単",
+                            "quinella_place": "ワイド",
+                            "trio": "３連複",
+                            "trifecta": "３連単"
+                        }
+
+                        type_header.innerHTML = ""
+                        type_text.innerHTML = ""
+                        type_footer.innerHTML = ""
+
+                        const eng_text = selected_type.replace("_", "\n").toUpperCase()
+
+                        type_header.textContent = eng_text
+                        type_footer.textContent = eng_text
+
+                        const jp_text = map[selected_type]
+
+                        for (const letter of jp_text){
+                            const span = document.createElement("span")
+                            span.textContent = letter
+
+                            type_text.appendChild(span)
+                        }
+                        if (jp_text.length == 3){
+                            type_text.style.gap = "25px"
+                        }
+                        else{
+                            type_text.style.gap = "100px"
+                        }
+                    }
                 }
 
                 pulldown.style.display = "none"
@@ -92,7 +142,7 @@ for (const input of inputs){
     const input_classlist = [...input.classList].filter(cl => cl !== "input")
     const input_class = input_classlist[0]
 
-    selected_el.addEventListener("click", ()=>{
+    input.addEventListener("click", ()=>{
         selected_el.style.display = "none"
         input_el.style.display = "block"
     })
@@ -121,7 +171,7 @@ const grade_race_toggle = document.getElementById("grade_race_toggle")
 const listed_toggle = document.getElementById("listed_race_toggle")
 
 grade_race_toggle.addEventListener("click", ()=>{
-    grade_race_toggle.classList.add("active")
+    grade_race_toggle.classList.toggle("active")
     listed_toggle.classList.remove("active")
 
     const race_edition_input = document.querySelector("div.input.race_edition")
@@ -136,27 +186,42 @@ grade_race_toggle.addEventListener("click", ()=>{
     const edition_input = document.querySelector("div.input.race_edition")
     const edition_selected_el = edition_input.querySelector("span.selected_element")
 
-    racegrade_text.textContent = grade_selected_el.textContent
-    race_edition_text.textContent = `第${num_to_full(edition_selected_el.textContent)}回`
+    if (grade_race_toggle.classList.contains("active")){
+        racegrade_text.textContent = grade_selected_el.textContent
+        race_edition_text.textContent = `第${num_to_full(edition_selected_el.textContent)}回`
 
-    race_edition_input.style.display = "flex"
-    race_grade_input.style.display = "block"
+        race_edition_input.style.display = "flex"
+        race_grade_input.style.display = "block"
+    }
+    else{
+        race_edition_input.style.display = "none"
+        race_grade_input.style.display = "none"
+        racegrade_text.textContent = ""
+        race_edition_text.textContent = ""
+    }
 })
 
 listed_toggle.addEventListener("click", ()=>{
-    listed_toggle.classList.add("active")
+    listed_toggle.classList.toggle("active")
     grade_race_toggle.classList.remove("active")
 
     const race_edition_input = document.querySelector("div.input.race_edition")
     const race_grade_input = document.querySelector("div.selector.race_grade")
 
-    race_edition_input.style.display = "none"
-    race_grade_input.style.display = "none"
-
     const racegrade_text = document.querySelector("span.value.race_grade")
     const race_edition_text = document.querySelector("span.value.race_edition")
-    racegrade_text.textContent = "（Ｌ）"
-    race_edition_text.textContent = ""
+    
+    if(listed_toggle.classList.contains("active")){
+        race_edition_input.style.display = "none"
+        race_grade_input.style.display = "none"
+
+        racegrade_text.textContent = "（Ｌ）"
+        race_edition_text.textContent = ""
+    }
+    else{
+        racegrade_text.textContent = ""
+        race_edition_text.textContent = ""
+    }
 })
 
 const racename_free = document.getElementById("racename_free")
@@ -176,6 +241,11 @@ racename_select.addEventListener("click", ()=>{
 
     raceinfo_console.style.display = "none"
 })
+
+
+
+
+
 
 const save_but = document.getElementById("save")
 

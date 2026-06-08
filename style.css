@@ -34,15 +34,19 @@ button.active{
 
 #console{
     line-height: 1.2;
-
-    display: flex;
     margin: 100px 100px 0 100px;
     height: 200px;
     width: auto;
-    gap: 20px;
     font-family: "Yu Gothic";
     font-size: 40px;
     font-weight: 1000;
+}
+
+#console_upper{
+    display: flex;
+    height: 100px;
+    width: auto;
+    gap: 20px;
 }
 .input{
     height: 50px;
@@ -97,6 +101,11 @@ button.active{
 }
 .pulldown{
     display: none;
+    position: relative;
+    z-index: 100;
+    background-color: white;
+    border: 2px solid black;
+    box-sizing: border-box;
 }
 .option{
     text-align: center;
@@ -145,6 +154,26 @@ button.active{
 }
 #save{
     height: 50px;
+}
+
+#console_lower{
+    display: flex;
+    height: 50px;
+    gap: 20px;
+
+    .betting_type{
+        width: 200px;
+    }
+
+    .horse_name{
+        width: 300px;
+        font-size: 20px;
+        input{
+            width: 300px;
+            font-size: 20px;
+        }
+    }
+
 }
 
 
@@ -313,13 +342,18 @@ button.active{
     position: relative;
     #gambare_box{
         display: flex;
+        width: 435px;
+        height: 75px;
+        margin-left: 15px;
+        span{
+            display: none;
+        }
+    }
+    #gambare_box.active{
         align-items: center;
 
         border: 2px solid black;
         box-sizing: border-box;
-        width: 435px;
-        height: 75px;
-        margin-left: 15px;
 
         font-family: "GenEi MGothic";
         font-size: 60px;
