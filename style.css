@@ -85,6 +85,7 @@ button.active{
 }
 .input.race_edition{
     display: none;
+    width: 200px;
 }
 .selector, .input{
     position: relative;
@@ -116,7 +117,7 @@ button.active{
 
 .selector.race_grade{
     display: none;
-    width: 200px;
+    width: 300px;
 }
 
 .option{
