@@ -117,7 +117,7 @@ button.active{
 
 .selector.race_grade{
     display: none;
-    width: 300px;
+    width: 250px;
 }
 
 .option{
@@ -339,8 +339,12 @@ button.active{
     #type_footer{
     }
 }
+
 #detail{
     position: relative;
+
+}
+#detail.yell{
     #gambare_box{
         display: flex;
         width: 435px;
@@ -350,7 +354,7 @@ button.active{
             display: none;
         }
     }
-    #gambare_box.active{
+    #gambare_box{
         align-items: center;
 
         border: 2px solid black;
@@ -369,9 +373,16 @@ button.active{
             margin-left: 10px;
         }
     }
+}
+
+#detail{
     #picks_container{
         margin-left: 5px;
-        margin-top: 75px;
+        margin-top: 5px;
+
+        .picks{
+            height: 140px;
+        }
 
         #horse_name_container{
             display: flex;

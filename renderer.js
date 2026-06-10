@@ -35,6 +35,23 @@ const opday = opday_container.querySelector("span.opday")
 
 const selectors = document.getElementsByClassName("selector")
 
+const property = {
+    "race_detail": {
+        "opdate": {
+            "opyear": Number,
+            "opnum": Number,
+            "opday": Number
+        },
+        "course": "",
+        "ticket_detail": {
+            "place": "",
+            "date": ""
+        }
+    },
+    "betting_type": "",
+    "betting_detail": {}
+}
+
 for (const selector of selectors){
     const pulldown = selector.querySelector(".pulldown") ?? null
 
@@ -85,10 +102,8 @@ for (const selector of selectors){
                     const gambare_box = document.getElementById("gambare_box")
                     
                     if(selected_type === "yell"){
-                        gambare_box.classList.add("active")
                     }
                     else{
-                        gambare_box.classList.remove("active")
                         const map = {
                             "win": "単勝",
                             "place_show": "複勝",
@@ -124,6 +139,25 @@ for (const selector of selectors){
                             type_text.style.gap = "100px"
                         }
                     }
+
+                    const detail = document.getElementById("detail")
+
+                    detail.classList.add(selected_type)
+
+                    if (selected_type === "bracket_quinella"){
+                        const betting_console = document.createElement("div")
+                        betting_console.id = "betting_console"
+
+                        const first = document.createElement("span")
+                        const second = document.createElement("span")
+
+                        let br = 1
+                        while (br <= 18){
+                            const check_container = document.createElement("div")
+
+                        }
+                    }
+                    
                 }
 
                 pulldown.style.display = "none"
