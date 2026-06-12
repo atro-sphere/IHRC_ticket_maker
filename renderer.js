@@ -22,7 +22,7 @@ function num_to_full(str){
 
 const ticket = document.getElementById("ticket_container")
 
-const operation_date_container = document.getElementById("operation_date")
+const operation_date_container = document.getElementById("opdate")
 
 const opyear_container = operation_date_container.querySelector("span.opyear")
 const opyear = opyear_container.querySelector("span.opyear")
@@ -163,7 +163,7 @@ for (const selector of selectors){
                 pulldown.style.display = "none"
             })
         }
-    }  
+    }
 }
 
 const inputs = document.getElementsByClassName("input")

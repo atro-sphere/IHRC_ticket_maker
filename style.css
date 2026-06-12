@@ -204,7 +204,7 @@ button.active{
 #left{
     width: 300px;
 }
-#operation_date{
+#opdate{
     height: 50px;
     .opyear{
         span.value{
